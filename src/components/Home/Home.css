@@ -1,0 +1,73 @@
+.home-section {
+  display: flex;
+  justify-content: center;
+  padding: 20px; /* Add some padding for better spacing */
+}
+
+.home-header {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  align-items: center; /* Center align items in the column layout */
+  text-align: center; /* Center text alignment */
+}
+
+.home-header h1 {
+  max-width: 600px;
+  font-size: 50px;
+}
+
+.home-header p {
+  max-width: 600px;
+  font-size: 30px;
+  margin-bottom: 10px;
+}
+
+.cta-button {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-family: "Roboto", sans-serif;
+  background: linear-gradient(135deg, #669bbc, #4a8dca); /* Example gradient */
+  color: bisque;
+  border: none;
+  padding: 10px;
+  font-size: 1.1em;
+  border-radius: 20px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+  width: 40%;
+  font-weight: bold;
+}
+
+.cta-button:hover {
+  background: linear-gradient(135deg, #4a8dca, #669bbc);
+  border: 2px white solid;
+}
+.anchor p {
+  text-decoration: none;
+}
+/* Media query for screens with a max-width of 768px */
+@media (max-width: 768px) {
+  .home-section {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+
+  .home-header h1 {
+    font-size: 30px;
+    max-width: 100%;
+  }
+
+  .home-header p {
+    font-size: 20px;
+    max-width: 100%;
+  }
+
+  .cta-button {
+    width: 80%;
+    font-size: 1em;
+    padding: 8px;
+  }
+}

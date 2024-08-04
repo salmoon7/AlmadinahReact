@@ -1,0 +1,122 @@
+.courses {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.courses h1 {
+  text-align: center;
+  font-size: 60px;
+}
+
+#courses h1 {
+  margin-bottom: 20px;
+}
+
+.courses-container {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 30px;
+  padding: 20px;
+}
+
+.background {
+  position: relative;
+  background-size: cover;
+  background-position: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  color: white; /* Adjust text color for readability */
+  text-align: center;
+  height: 300px; /* Adjust height as needed */
+  border-radius: 20px;
+  overflow: hidden;
+  padding: 20px;
+  transition: transform 0.4s;
+}
+
+.background:hover {
+  transform: scale(1.05); /* Slightly increase the scale for a zoom-in effect */
+}
+
+.background::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0.6); /* Add overlay for text visibility */
+  z-index: 0;
+}
+
+.content {
+  position: relative;
+  z-index: 1; /* Ensure content is on top of overlay */
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.content h1 {
+  font-size: 24px;
+  font-weight: bold;
+  margin-bottom: 10px;
+}
+
+.content p {
+  margin-bottom: 20px;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  line-height: 1.6em;
+  font-weight: bold;
+}
+
+.read-more {
+  background-color: #f27059;
+  padding: 10px 20px;
+  border-radius: 10px;
+  text-align: center;
+  cursor: pointer;
+  text-decoration: none;
+  color: bisque;
+}
+
+.read-more:hover {
+  border: 1px white solid;
+}
+
+/* Media query for screens with a max-width of 768px */
+@media (max-width: 768px) {
+  .courses h1 {
+    font-size: 40px; /* Reduce font size */
+  }
+
+  .courses-container {
+    grid-template-columns: 1fr; /* Single column layout */
+    gap: 20px; /* Reduce gap between items */
+    padding: 10px; /* Reduce padding */
+  }
+
+  .background {
+    height: 300px; /* Reduce height */
+    padding: 10px; /* Reduce padding */
+  }
+
+  .content h1 {
+    font-size: 20px; /* Reduce font size */
+  }
+
+  .content p {
+    font-size: 16px; /* Reduce font size */
+    margin-bottom: 10px; /* Reduce margin */
+  }
+
+  .read-more {
+    padding: 8px 16px; /* Reduce padding */
+    font-size: 0.9em; /* Reduce font size */
+  }
+}
